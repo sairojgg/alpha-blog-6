@@ -7,6 +7,10 @@ class UsersController < ApplicationController
 
   def edit
   end
+
+  def show
+    @articles = @user.articles
+  end
   
   def create
     @user = User.new(user_params)
